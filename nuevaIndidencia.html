@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./scripts/tooltips.js"></script>
+        <title>
+            Nueva incidencia
+        </title>
+    </head>
+    <body>
+        <h1>
+            Nueva incidencia
+        </h1>
+        <div>
+            <form action="/incidencia/nueva">
+                <div class="form-group">
+                    <label for="titleInput">Introduce un título</label>
+                    <input type="text" class="form-control" id="titleInput" aria-describedby="titleHelp" placeholder="Titulo de la incidencia">
+                    <small id="titleHelp" class="form-text text-muted">Elige un título conciso y descriptivo</small>
+                </div>
+                <label>Tipo de discapacidad</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
+                    <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad fisica">Fisica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
+                    <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad psicosociales">Psicosocial</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
+                    <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad cognitiva">Cognitiva</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
+                    <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad sensorial">Sensorial</label>
+                </div>
+                <div class="form-group">
+                        <label for="ubicacionInput">Ubicación</label>
+                        <textarea class="form-control" id="observacionesInput" rows="3"></textarea>
+                    </div>
+                <div class="form-group">
+                    <label for="observacionesInput">Observaciones</label>
+                    <textarea class="form-control" id="observacionesInput" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
