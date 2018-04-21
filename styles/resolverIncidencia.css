@@ -42,4 +42,7 @@
     border-bottom-right-radius: .25em;
     border-top-right-radius: .25em;
 }
-  
+
+.modal-body label{
+    border: none;
+}
