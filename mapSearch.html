@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/mapSearch.css">
+    <script src="./scripts/location.js"></script>
+    <script src="./scripts/tooltips.js"></script>
     <script src="./scripts/map.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -36,17 +43,40 @@
 
     <div class="mainsection container">
         <form>
-            <!--Origen-->
-            <div class="form-group">
+        <!--Origen-->
+        <div class="form-group">
                 <label for="originInput">Origen </label>
-                <input type="text" class="form-control" id="originInput">
+                <div id="locationField">
+                    <input id="autocomplete" class="form-control" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                </div>
             </div>
             <!--Destino-->
             <div class="form-group">
                 <label for="destInput">Destino </label>
-                <input type="text" class="form-control" id="destInput">
+                <div id="locationField">
+                    <input id="autocomplete" class="form-control" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                </div>
             </div>
             <!--etiquetas-->
+            <label>Tipo de discapacidad</label>
+            <div class="horizontal form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
+                    <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad fisica">Fisica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
+                    <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad psicosociales">Psicosocial</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
+                    <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad cognitiva">Cognitiva</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
+                    <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad sensorial">Sensorial</label>
+                </div>
+            </div>
             <!--Botones de ruta aqui-->
             <div class="centerButtons" id="queryFormButtons">
                 <button class="btn">Transporte Público</button>
@@ -60,7 +90,7 @@
     </div>
 
     <div id="map" class="container">
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcHPb0jtpNFs83fZobeJ0HZUCFc-0w_s&callback=loadMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcHPb0jtpNFs83fZobeJ0HZUCFc-0w_s&libraries=places&callback=loadMap"></script>
     </div>
 
 </body>

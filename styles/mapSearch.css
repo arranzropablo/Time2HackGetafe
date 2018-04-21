@@ -16,3 +16,9 @@ html, body {
 .centerButtons{
     text-align: center;
 }
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

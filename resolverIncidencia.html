@@ -2,14 +2,18 @@
 <html>
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    <script src="scripts/resolverIncidencia.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M"
-        crossorigin="anonymous"></script>
     <title>Resolver incidencia</title>
     <link href="styles/resolverIncidencia.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./styles/styles.css">
@@ -39,45 +43,86 @@
             </div>
         </nav>
     </header>
-
     <div class="container mainsection">
         <div class="row ">
             <div class="col-md-6 offset-md-3">
                 <div class="form-group" class="panel panel-primary ">
-
-
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Resolver Incidencias</h3>
+                    </div>
                     <form method="post">
                         <div class="form-group">
                             <div class="input-group-row">
-                                <input type="text" class="form-control" name="validate-text" id="validate-text" placeholder="Buscar incidencia" required>
-                                <span class="input-group-addon danger">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </span>
+                                <div class="input-group">
+                                    <span class="input-group-addon search-class icon-search">
+                                        <i id="fa" class="fa fa-search"></i>
+                                    </span>
+                                    <input id="incidencia" class="form-control search-class input-search" type="search" placeholder="Buscar incidencia" oninput="copia()">
+                                </div>
                             </div>
                         </div>
                     </form>
-
-
-                    <ul class="list-group">
-                        <li class="list-group-item">Aviso sobre problema 1
+                    <ul class="list-group" id="listaIncidencias">
+                        <li class="list-group-item">Pepe 1
                             <div id="button">
                                 <button type="button" class="btn btn-primary">Detalles</button>
                                 <button type="button" class="btn btn-success">Resolver</button>
                             </div>
                         </li>
-                        <li class="list-group-item" id="li">Aviso sobre problema 2
+                        <li class="list-group-item" id="li">Pepe 2
                             <div id="button">
                                 <button type="button" class="btn btn-primary">Detalles</button>
                                 <button type="button" class="btn btn-success">Resolver</button>
                             </div>
                         </li>
-                        <li class="list-group-item" id="li">Aviso sobre problema 3
+                        <li class="list-group-item" id="li">3
                             <div id="button">
                                 <button type="button" class="btn btn-primary">Detalles</button>
                                 <button type="button" class="btn btn-success">Resolver</button>
                             </div>
                         </li>
-
+                        <li class="list-group-item" id="li">4
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">5
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">6
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">7
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">8
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">9
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">10
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
