@@ -2,11 +2,6 @@
     float: right;
 }
 
-body {
-    padding: 20px;
-    background-color: white;
-}
-
 .search-class {
     border: none;
     background: #ffffff;
@@ -32,11 +27,19 @@ body {
 }
 
 #fa{
-    margin-top: 10px;
+    margin-top: 6px;
+    padding: 5px;
 }
 
 #listaIncidencias{
     overflow: auto;
-    height: 600px;
+    height: 550px;
+}
+
+.input-group-addon{
+    color: black;
+    background-color: #ffffff;
+    border-bottom-right-radius: .25em;
+    border-top-right-radius: .25em;
 }
   
