@@ -9,7 +9,6 @@ let info = [
         avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
-
     {
         ubicacion: "C/ Terradas, Getafe",
         foto: "img/obrasGetafe.jpg",
