@@ -16,6 +16,7 @@
       };
 
       var places = [];
+      let inputIndex = 0;
 
       function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
@@ -24,9 +25,10 @@
         
         let elements = document.getElementsByClassName('autocomplete')
         for(let i = 0; i < elements.length; i++){
+          $(elements).on("change", function(){inputIndex = i})
           let autoC = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */(elements[i]), {types: ['geocode']});
-          autoC.addListener('place_changed', fillInAddress(i))
+          autoC.addListener('place_changed', fillInAddress)
           autocomplete.push(autoC);
         }
         
@@ -35,9 +37,9 @@
         //autocomplete.addListener('place_changed', fillInAddress);
       }
 
-      function fillInAddress(index) {
+      function fillInAddress() {
         // Get the place details from the autocomplete object.
-        var place = autocomplete[index].getPlace();
+        var place = autocomplete[inputIndex].getPlace();
 
         for (var component in componentForm) {
           document.getElementById(component).value = '';
