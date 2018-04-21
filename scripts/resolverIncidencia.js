@@ -6,19 +6,19 @@ let info = [
     {
         ubicacion: "Estacion de tren Getafe Centro",
         foto: "img/averiaAscensorLaguna.jpg",
-        avisoA: "ayuntamientoDeGetafe@gmail.com",
+        avisoA: "informacion@ayto-getafe.org",
         afectados: "Fisica/motora"
     },
     {
         ubicacion: "C/ Terradas nr 14 - 24, Getafe",
         foto: "img/obrasGetafe.jpg",
-        avisoA: "ayuntamientoDeGetafe@gmail.com",
+        avisoA: "informacion@ayto-getafe.org",
         afectados: "Fisica/motora"
     },
     {
         ubicacion: "Av. Río Guadalquivir, 13, Cine Nassica",
         foto: "img/cine.jpg",
-        avisoA: "cineNassica@atencionCliente.com",
+        avisoA: "informacion@ayto-getafe.org",
         afectados: "Fisica/motora"
     }
 ];
