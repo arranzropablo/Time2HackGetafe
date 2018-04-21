@@ -1,6 +1,8 @@
 body {
-    background-color: #C0CDFA;
+    /*background-color: #C0CDFA;*/
     font-size: 24px;
+    background-image: url("../resources/papel.jpg");
+    background-repeat: unset;
 }
 
 .mainsection {
@@ -23,7 +25,7 @@ body {
     height: 55px;
     width: 40%;
     font-size: 30px;
-    background: #31f95d;
+    background: rgb(40, 167, 69);
 }
 .optionBtn:hover{
     font-size: 32px;
@@ -51,3 +53,6 @@ body {
 }
 
 
+#pictureSelector{
+    font-size: 14px;
+}
