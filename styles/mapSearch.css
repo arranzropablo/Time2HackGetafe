@@ -4,11 +4,23 @@ html, body {
 
 #map {
     height: 50%;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#chachomap{
+    height: 50%;
     width: 40%;
     margin-top: 1rem;
     border: solid 3px black;
+    display: block;
 }
 
+#chachomap img{
+    height: 100%;
+    width: 100%;
+}
 #queryFormButtons{
     margin-bottom: 1rem;
 }
