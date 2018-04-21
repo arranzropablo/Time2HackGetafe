@@ -7,20 +7,16 @@ let info = [
         ubicacion: "Estacion de tren Getafe Centro",
         foto: "img/averiaAscensorLaguna.jpg",
         avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
+        afectados: "Física",
+        obs: "El ascensor no funciona. Reparacion en unos 7 días"
     },
     {
         ubicacion: "C/ Terradas nr 14 - 24, Getafe",
         foto: "img/obrasGetafe.jpg",
         avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
+        afectados: "Física",
+        obs: "Plan de acerado del Ayntamiento de Getafe. Finaliza en 2 meses"
     },
-    {
-        ubicacion: "Av. Río Guadalquivir, 13, Cine Nassica",
-        foto: "img/cine.jpg",
-        avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
-    }
 ];
 
 $(function() {
@@ -66,6 +62,5 @@ function detallesIncidencia(nr){
     $("#foto").attr("src",info[nr].foto);
     $("#aviso").text(info[nr].avisoA);
     $("#afectados").text(info[nr].afectados);
+    $("#obs").text(info[nr].obs);
 };
-
-
