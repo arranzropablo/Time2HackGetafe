@@ -4,16 +4,16 @@ let i = 0;
 
 let info = [
     {
-        ubicacion: "Estacion de Metro Lavapies, entrada C/ Alhambra",
-        foto: "img/ascensorLavapies.jpg",
-        avisoA: "ayuntamientoDeMadrid@gmail.com",
+        ubicacion: "Estacion de metro Getafe",
+        foto: "img/averiaAscensorLaguna.jpg",
+        avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
 
     {
-        ubicacion: "C/ Valle de oro, Oporto-Opañel",
-        foto: "img/obras.jpg",
-        avisoA: "ayuntamientoDeMadrid@gmail.com",
+        ubicacion: "C/ Terradas, Getafe",
+        foto: "img/obrasGetafe.jpg",
+        avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
     {
