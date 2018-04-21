@@ -1,8 +1,6 @@
-$(() =>{
-    console.log("funciono");
-});
 
-function loadMap(){
+
+function loadMap() {
     var madrid = { lat: 40.416775, lng: -3.703790 };
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
@@ -14,4 +12,5 @@ function loadMap(){
         disableDoubleClickZoom: true
     });
     console.log(map);
+    initAutocomplete();
 }

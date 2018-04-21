@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/mapSearch.css">
+    <script src="./scripts/location.js"></script>
     <script src="./scripts/map.js"></script>
 </head>
 
@@ -17,12 +18,16 @@
         <!--Origen-->
         <div class="form-group">
             <label for="originInput">Origen </label>
-            <input type="text" class="form-control" id="originInput">
+            <div id="locationField">
+                <input id="autocomplete" class="form-control"  placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+            </div>
         </div>
         <!--Destino-->
         <div class="form-group">
             <label for="destInput">Destino </label>
-            <input type="text" class="form-control" id="destInput">
+            <div id="locationField">
+                <input id="autocomplete" class="form-control"  placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+            </div>
         </div>
         <!--etiquetas-->
         <!--Botones de ruta aqui-->
@@ -37,7 +42,7 @@
     </form>
 
     <div id="map" class="container">
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcHPb0jtpNFs83fZobeJ0HZUCFc-0w_s&callback=loadMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcHPb0jtpNFs83fZobeJ0HZUCFc-0w_s&libraries=places&callback=loadMap"></script>
     </div>
 
 </body>
