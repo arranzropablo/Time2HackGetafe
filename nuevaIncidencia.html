@@ -51,15 +51,15 @@
                     <div class="form-group">
                         <label for="ubicacionInput">Ubicación</label>
                         <div id="locationField">
-                            <input id="autocomplete" placeholder="Introduce la dirección" onFocus="geolocate()" type="text"></input>
+                            <input id="autocomplete" class="form-control" placeholder="Introduce la dirección" onFocus="geolocate()" type="text"></input>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="fotoLabel">Foto</label>
                         <div class="input-group mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                <label class="custom-file-label" for="inputGroupFile02">Elige una foto</label>
+                                <input type="file" class="custom-file-input" id="inputGroupFile02" placeholder="Elige una foto">
+                                <label class="custom-file-label" id="pictureSelector" for="inputGroupFile02">Elige una foto</label>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">@</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -103,8 +103,9 @@
                 <label for="observacionesInput">Observaciones</label>
                 <textarea class="form-control" id="observacionesInput" rows="3"></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="centerButtons">
+                <button type="submit" id="searchBtn" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 
