@@ -1,4 +1,7 @@
 
+$(() => {
+    $("#searchBtn").on("click", setChachoMap);
+});
 
 function loadMap() {
     var madrid = { lat: 40.416775, lng: -3.703790 };
@@ -13,4 +16,8 @@ function loadMap() {
     });
     console.log(map);
     initAutocomplete();
+}
+
+function setChachoMap(){
+    $("#map").hide();
 }
