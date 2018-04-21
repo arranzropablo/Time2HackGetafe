@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Buscar ruta</a>
+                        <a class="nav-link" href="./mapSearch.html">Buscar ruta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Avisanos!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Explorar</a>
+                        <a class="nav-link" href="./resolverIncidencia.html">Explorar</a>
                     </li>
                 </ul>
             </div>
@@ -46,43 +46,64 @@
 
     <div class="container mainsection">
         <form action="/incidencia/nueva">
-            <div class="form-group">
-                <label for="titleInput">Introduce un título</label>
-                <input type="text" class="form-control" id="titleInput" aria-describedby="titleHelp" placeholder="Titulo de la incidencia">
-                <small id="titleHelp" class="form-text text-muted">Elige un título conciso y descriptivo</small>
-            </div>
-            <label>Tipo de discapacidad</label>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
-                <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad fisica">Fisica</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
-                <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad psicosociales">Psicosocial</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
-                <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad cognitiva">Cognitiva</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
-                <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad sensorial">Sensorial</label>
-            </div>
-            <div class="form-group">
-                <label for="ubicacionInput">Ubicación</label>
-                <div id="locationField">
-                    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="titleInput">Introduce un título</label>
+                        <input type="text" class="form-control" id="titleInput" aria-describedby="titleHelp" placeholder="Titulo de la incidencia">
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacionInput">Ubicación</label>
+                        <div id="locationField">
+                            <input id="autocomplete" placeholder="Introduce la dirección" onFocus="geolocate()" type="text"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fotoLabel">Foto</label>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02">Elige una foto</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fotoLabel">Correo del responsable de arreglar la incidencia (opcional)</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 tipodiscapacidad">
+                    <div>
+                        <label>Tipo de discapacidad</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
+                            <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Disminución o ausencia de funciones físicas. e.g.: Paraplegia, hemiplegia.">Fisica</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
+                            <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Afecta a los comportamientos sociales de la persona. e.g.: TOC, esquizofrenia.">Psicosocial</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
+                            <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Limitación en el funcionamiento intelectual. e.g.: Sindrome de down.">Cognitiva</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
+                            <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Deficiencias visuales y/o auditivas. e.g.: Sordera, Ceguera.">Sensorial</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="input-group mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                    <span class="input-group-text" id="">Upload</span>
-                </div>
-            </div>
+
+
+
             <div class="form-group">
                 <label for="observacionesInput">Observaciones</label>
                 <textarea class="form-control" id="observacionesInput" rows="3"></textarea>

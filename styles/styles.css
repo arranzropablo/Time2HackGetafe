@@ -6,3 +6,9 @@ body {
     margin-top: 20px;
     padding: 0 50px;
 }
+
+.tipodiscapacidad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
