@@ -4,23 +4,22 @@ let i = 0;
 
 let info = [
     {
-        ubicacion: "Estacion de Metro Lavapies, entrada C/ Alhambra",
-        foto: "img/ascensorLavapies.jpg",
-        avisoA: "ayuntamientoDeMadrid@gmail.com",
-        afectados: "Fisica/motora"
-    },
-
-    {
-        ubicacion: "C/ Valle de oro, Oporto-Opañel",
-        foto: "img/obras.jpg",
-        avisoA: "ayuntamientoDeMadrid@gmail.com",
+        ubicacion: "Estacion de tren Getafe Centro",
+        foto: "img/averiaAscensorLaguna.jpg",
+        avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
     {
-        ubicacion: "Museo Naval",
-        foto: "img/naval.jpg",
-        avisoA: "museoNavalAtencion@gmail.com",
-        afectados: "Fisica/motora, Visual"
+        ubicacion: "C/ Terradas nr 14 - 24, Getafe",
+        foto: "img/obrasGetafe.jpg",
+        avisoA: "ayuntamientoDeGetafe@gmail.com",
+        afectados: "Fisica/motora"
+    },
+    {
+        ubicacion: "Av. Río Guadalquivir, 13, Cine Nassica",
+        foto: "img/cine.jpg",
+        avisoA: "cineNassica@atencionCliente.com",
+        afectados: "Fisica/motora"
     }
 ];
 
