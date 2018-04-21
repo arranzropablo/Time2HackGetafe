@@ -1,6 +1,8 @@
 "use strict";
 let copy;
 let i = 0;
+
+
 $(function() {
     copy = $("#listaIncidencias li");
 });
@@ -36,3 +38,11 @@ function resolverIncidencia(event){
     $("#listaIncidencias").append(copy);
     i++;
 };
+
+function detallesIncidencia(nr){
+    let aviso = String($(copy[nr]).text()).replace('Resolver','').replace('Detalles','');
+    $("#modalLongTitle").text(aviso);
+
+};
+
+
