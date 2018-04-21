@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -15,11 +16,34 @@
         crossorigin="anonymous">
     <title>Resolver incidencia</title>
     <link href="styles/resolverIncidencia.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./styles/styles.css">
 
 </head>
 
 <body>
-    <div class="container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Buscar ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Avisanos!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mainsection">
         <div class="row ">
             <div class="col-md-6 offset-md-3">
                 <div class="form-group" class="panel panel-primary ">
@@ -28,7 +52,7 @@
                         <div class="form-group">
                             <div class="input-group-row">
                                 <div class="input-group">
-                                    
+
                                     <input id="incidencia" class="form-control search-class input-search" type="search" placeholder="Buscar incidencia" oninput="copia()" >
                                     <span class="input-group-addon search-class icon-search">
                                             <i id="fa" class="fa fa-search"></i>
@@ -37,7 +61,7 @@
                             </div>
                         </div>
                     </form>
-                    <ul class="list-group" id = "listaIncidencias">
+                    <ul class="list-group" id="listaIncidencias">
                         <li class="list-group-item">Pepe 1
                             <div id="button">
                                 <button type="button" class="btn btn-primary">Detalles</button>
@@ -103,7 +127,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
