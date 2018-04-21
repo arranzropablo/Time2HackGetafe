@@ -4,9 +4,9 @@ html, body {
 
 #map {
     height: 50%;
-    width: 40%;
+    width: 80%;
     margin-top: 1rem;
-    border: solid 3px black;
+    margin-bottom: 1rem;
 }
 
 #chachomap{
