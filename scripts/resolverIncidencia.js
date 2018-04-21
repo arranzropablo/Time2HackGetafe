@@ -19,8 +19,8 @@ let info = [
     {
         ubicacion: "Museo Naval",
         foto: "img/naval.jpg",
-        avisoA: "museoDelPrado@gmail.com",
-        afectados: "Fisica/motora"
+        avisoA: "museoNavalAtencion@gmail.com",
+        afectados: "Fisica/motora, Visual"
     }
 ];
 
