@@ -7,20 +7,14 @@ let info = [
         ubicacion: "Estacion de tren Getafe Centro",
         foto: "img/averiaAscensorLaguna.jpg",
         avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
+        afectados: "Física"
     },
     {
         ubicacion: "C/ Terradas nr 14 - 24, Getafe",
         foto: "img/obrasGetafe.jpg",
         avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
+        afectados: "Física"
     },
-    {
-        ubicacion: "Av. Río Guadalquivir, 13, Cine Nassica",
-        foto: "img/cine.jpg",
-        avisoA: "informacion@ayto-getafe.org",
-        afectados: "Fisica/motora"
-    }
 ];
 
 $(function() {
