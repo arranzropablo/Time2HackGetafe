@@ -1,6 +1,10 @@
 
 $(() => {
-    $("#searchBtn").on("click", setChachoMap);
+    $("#map").hide();
+    $("#searchBtn").on("click", showHideMap);
+    $(".optionBtn").each((index, item)=> {
+        $(item).on("click", markSelectedBtn);
+    });
 });
 
 function loadMap() {
@@ -18,6 +22,17 @@ function loadMap() {
     initAutocomplete();
 }
 
-function setChachoMap(){
-    $("#map").hide();
+function showHideMap(){
+    if($("#map").is(":hidden"))
+        $("#map").show();
+    else
+        $("#map").hide();
+    
+}
+
+function markSelectedBtn(event, item){
+    $(".optionBtn").each((index, item) => {
+        $(item).removeClass("clicked");
+    });
+    $(event.currentTarget).addClass("clicked");
 }

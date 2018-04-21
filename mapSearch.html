@@ -2,14 +2,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/mapSearch.css">
     <script src="./scripts/location.js"></script>
     <script src="./scripts/tooltips.js"></script>
@@ -21,8 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,7 +26,7 @@
                         <a class="nav-link" href="#">Buscar ruta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./nuevaIncidencia.html">Avisanos!</a>
+                        <a class="nav-link" href="./nuevaIncidencia.html">Avísanos!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./resolverIncidencia.html">Explorar</a>
@@ -43,8 +38,8 @@
 
     <div class="mainsection container">
         <form>
-        <!--Origen-->
-        <div class="form-group">
+            <!--Origen-->
+            <div class="form-group">
                 <label for="originInput">Origen </label>
                 <div id="locationField">
                     <input class="form-control autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
@@ -79,11 +74,11 @@
             </div>
             <!--Botones de ruta aqui-->
             <div class="centerButtons" id="queryFormButtons">
-                <button class="btn">Transporte Público</button>
-                <button class="btn">Peatón</button>
+                <button type="button" class="btn optionBtn" >Transporte Público</button>
+                <button type="button" class="btn optionBtn" >Peatón</button>
             </div>
             <div class="centerButtons ">
-                <button alt="Buscar" id="searchBtn" class="btn btn-primary">Buscar</button>
+                <button alt="Buscar" type="button" id="searchBtn" class="btn btn-primary">Buscar</button>
             </div>
 
         </form>
