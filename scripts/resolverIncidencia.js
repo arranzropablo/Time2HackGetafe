@@ -4,22 +4,22 @@ let i = 0;
 
 let info = [
     {
-        ubicacion: "Estacion de metro Getafe",
+        ubicacion: "Estacion de tren Getafe Centro",
         foto: "img/averiaAscensorLaguna.jpg",
         avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
     {
-        ubicacion: "C/ Terradas, Getafe",
+        ubicacion: "C/ Terradas nr 14 - 24, Getafe",
         foto: "img/obrasGetafe.jpg",
         avisoA: "ayuntamientoDeGetafe@gmail.com",
         afectados: "Fisica/motora"
     },
     {
-        ubicacion: "Museo Naval",
-        foto: "img/naval.jpg",
-        avisoA: "museoNavalAtencion@gmail.com",
-        afectados: "Fisica/motora, Visual"
+        ubicacion: "Av. Río Guadalquivir, 13, Cine Nassica",
+        foto: "img/cine.jpg",
+        avisoA: "cineNassica@atencionCliente.com",
+        afectados: "Fisica/motora"
     }
 ];
 
