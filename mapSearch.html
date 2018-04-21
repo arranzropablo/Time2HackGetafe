@@ -14,57 +14,80 @@
     <script src="./scripts/location.js"></script>
     <script src="./scripts/tooltips.js"></script>
     <script src="./scripts/map.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
-    <h1>
-        Ruta
-    </h1>
-    <form class="container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Buscar ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Avisanos!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mainsection container">
+        <form>
         <!--Origen-->
         <div class="form-group">
-            <label for="originInput">Origen </label>
-            <div id="locationField">
-                <input id="autocomplete" class="form-control autocomplete" placeholder="Enter your address" type="text"></input>
+                <label for="originInput">Origen </label>
+                <div id="locationField">
+                    <input id="autocomplete" class="form-control" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                </div>
             </div>
-        </div>
-        <!--Destino-->
-        <div class="form-group">
-            <label for="destInput">Destino </label>
-            <div id="locationField">
-                <input id="autocomplete" class="form-control autocomplete" placeholder="Enter your address" type="text"></input>
+            <!--Destino-->
+            <div class="form-group">
+                <label for="destInput">Destino </label>
+                <div id="locationField">
+                    <input id="autocomplete" class="form-control" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                </div>
             </div>
-        </div>
-        <!--etiquetas-->
-        <label>Tipo de discapacidad</label>
-        <div class="horizontal form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
-                <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad fisica">Fisica</label>
+            <!--etiquetas-->
+            <label>Tipo de discapacidad</label>
+            <div class="horizontal form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadFisica">
+                    <label class="form-check-label" for="discapacidadFisica" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad fisica">Fisica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
+                    <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad psicosociales">Psicosocial</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
+                    <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad cognitiva">Cognitiva</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
+                    <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad sensorial">Sensorial</label>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadPsicosocial">
-                <label class="form-check-label" for="discapacidadPsicosocial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad psicosociales">Psicosocial</label>
+            <!--Botones de ruta aqui-->
+            <div class="centerButtons" id="queryFormButtons">
+                <button class="btn">Transporte Público</button>
+                <button class="btn">Peatón</button>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadCognitiva">
-                <label class="form-check-label" for="discapacidadCognitiva" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad cognitiva">Cognitiva</label>
+            <div class="centerButtons ">
+                <button alt="Buscar" class="btn btn-primary">Buscar</button>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="discapacidadSensorial">
-                <label class="form-check-label" for="discapacidadSensorial" data-toggle="tooltip" data-placement="right" title="Explicación discapacidad sensorial">Sensorial</label>
-            </div>
-        </div>
-        <!--Botones de ruta aqui-->
-        <div class="centerButtons" id="queryFormButtons">
-            <button class="btn">Transporte Público</button>
-            <button class="btn">Peatón</button>
-        </div>
-        <div class="centerButtons ">
-            <button alt="Buscar" class="btn btn-primary">Buscar</button>
-        </div>
 
-    </form>
+        </form>
+    </div>
 
     <div id="map" class="container">
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLcHPb0jtpNFs83fZobeJ0HZUCFc-0w_s&libraries=places&callback=loadMap"></script>

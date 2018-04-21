@@ -13,6 +13,7 @@
 
     <script src="./scripts/tooltips.js"></script>
     <link rel="stylesheet" href="./styles/location.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <title>
         Nueva incidencia
@@ -20,10 +21,30 @@
 </head>
 
 <body>
-    <h1>
-        Nueva incidencia
-    </h1>
-    <div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Buscar ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Avisanos!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mainsection">
         <form action="/incidencia/nueva">
             <div class="form-group">
                 <label for="titleInput">Introduce un título</label>
@@ -50,7 +71,16 @@
             <div class="form-group">
                 <label for="ubicacionInput">Ubicación</label>
                 <div id="locationField">
-                    <input id="autocomplete" class="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="">Upload</span>
                 </div>
             </div>
             <div class="form-group">
