@@ -2,6 +2,27 @@
 let copy;
 let i = 0;
 
+let info = [
+    {
+        ubicacion: "Estacion de Metro Lavapies, entrada C/ Alhambra",
+        foto: "img/ascensorLavapies.jpg",
+        avisoA: "ayuntamientoDeMadrid@gmail.com",
+        afectados: "Fisica/motora"
+    },
+
+    {
+        ubicacion: "C/ Valle de oro, Oporto-Opañel",
+        foto: "img/obras.jpg",
+        avisoA: "ayuntamientoDeMadrid@gmail.com",
+        afectados: "Fisica/motora"
+    },
+    {
+        ubicacion: "Museo Naval",
+        foto: "img/naval.jpg",
+        avisoA: "museoNavalAtencion@gmail.com",
+        afectados: "Fisica/motora, Visual"
+    }
+];
 
 $(function() {
     copy = $("#listaIncidencias li");
@@ -42,7 +63,10 @@ function resolverIncidencia(event){
 function detallesIncidencia(nr){
     let aviso = String($(copy[nr]).text()).replace('Resolver','').replace('Detalles','');
     $("#modalLongTitle").text(aviso);
-
+    $("#ubicacion").text(info[nr].ubicacion);
+    $("#foto").attr("src",info[nr].foto);
+    $("#aviso").text(info[nr].avisoA);
+    $("#afectados").text(info[nr].afectados);
 };
 
 
