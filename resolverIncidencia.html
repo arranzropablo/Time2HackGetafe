@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M" crossorigin="anonymous"></script>
-        <title>Resolver incidencia</title>
-        <link href="styles/resolverIncidencia.css" rel="stylesheet" type="text/css">
-    </head>
 
-    <body>
-        <div class="container">
-            <div class = "row ">
-                <div class="col-md-6 offset-md-3">
-                    <div class= "form-group" class="panel panel-primary ">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Resolver Incidencias</h3>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M"
+        crossorigin="anonymous"></script>
+    <title>Resolver incidencia</title>
+    <link href="styles/resolverIncidencia.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Buscar ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Avisanos!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mainsection">
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group" class="panel panel-primary ">
+
+
+                    <form method="post">
+                        <div class="form-group">
+                            <div class="input-group-row">
+                                <input type="text" class="form-control" name="validate-text" id="validate-text" placeholder="Buscar incidencia" required>
+                                <span class="input-group-addon danger">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </span>
+                            </div>
                         </div>
-                       
-                            <form method="post">
-                                <div class="form-group">
-                                    <div  class="input-group-row">
-                                        <input type="text" class="form-control" name="validate-text" id="validate-text" placeholder="Buscar incidencia" required>
-                                        <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                                    </div>
-                                </div>
-                            </form>
-                    
-                           
-                        <ul class="list-group">
-                            <li class="list-group-item" >Aviso sobre problema 1
-                                <div id= "button" >
-                                    <button  type="button" class="btn btn-primary">Detalles</button>
-                                    <button   type="button" class="btn btn-success">Resolver</button>
-                                </div>
-                            </li>
-                            <li class="list-group-item" id = "li">Aviso sobre problema 2
-                                    <div id= "button">
-                                        <button  type="button" class="btn btn-primary">Detalles</button>
-                                        <button   type="button" class="btn btn-success">Resolver</button>
-                                    </div>
-                                </li>
-                                <li class="list-group-item" id = "li">Aviso sobre problema 3
-                                        <div id= "button">
-                                            <button  type="button" class="btn btn-primary">Detalles</button>
-                                            <button   type="button" class="btn btn-success">Resolver</button>
-                                        </div>
-                                    </li> 
-                        
-                        </ul>
-                    </div>
+                    </form>
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item">Aviso sobre problema 1
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">Aviso sobre problema 2
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item" id="li">Aviso sobre problema 3
+                            <div id="button">
+                                <button type="button" class="btn btn-primary">Detalles</button>
+                                <button type="button" class="btn btn-success">Resolver</button>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 
 </html>
