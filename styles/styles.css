@@ -2,7 +2,6 @@ body {
     /*background-color: #C0CDFA;*/
     font-size: 24px;
     background-image: url("../resources/papel.jpg");
-    background-repeat: unset;
 }
 
 .mainsection {
@@ -43,8 +42,8 @@ body {
 }
 
 #searchBtn:hover{
-    background: #2ae252;
-    border: #2ae252;
+    background: #dd7206;
+    border: #ff8811;
 }
 
 .clicked {
