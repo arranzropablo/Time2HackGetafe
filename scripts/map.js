@@ -8,9 +8,9 @@ $(() => {
 });
 
 function loadMap() {
-    var madrid = { lat: 40.416775, lng: -3.703790 };
+    var madrid = { lat: 40.3080784, lng: -3.7302911 };
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
+        zoom: 15,
         center: madrid,
         disableDefaultUI: true,
         zoomControl: true,

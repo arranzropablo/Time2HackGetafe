@@ -25,19 +25,24 @@ body {
     font-size: 30px;
     background: #31f95d;
 }
-.btn:hover{
+.optionBtn:hover{
     font-size: 32px;
     background: #2ae252;
     color: white;
 }
 
-.btn-primary{
+#searchBtn{
     font-size: 30px;
     height: 55px !important;
     width: 80% !important;
     background: #ff8811;
     text-align: center;
     border-color: #ff8811;
+}
+
+#searchBtn:hover{
+    background: #2ae252;
+    border: #2ae252;
 }
 
 .clicked {
