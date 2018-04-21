@@ -55,3 +55,16 @@ body {
 #pictureSelector{
     font-size: 14px;
 }
+
+#endSearch{
+    margin: 2rem 26%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#imagenChunga{
+    height: 50%;
+    width: 70%;
+}
