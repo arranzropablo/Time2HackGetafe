@@ -1,5 +1,6 @@
 body {
     background-color: #C0CDFA;
+    font-size: 24px;
 }
 
 .mainsection {
@@ -17,3 +18,31 @@ body {
     height: 20px;
     width: 20px;
 }
+
+.optionBtn {
+    height: 55px;
+    width: 40%;
+    font-size: 30px;
+    background: #31f95d;
+}
+.btn:hover{
+    font-size: 32px;
+    background: #2ae252;
+    color: white;
+}
+
+.btn-primary{
+    font-size: 30px;
+    height: 55px !important;
+    width: 80% !important;
+    background: #ff8811;
+    text-align: center;
+    border-color: #ff8811;
+}
+
+.clicked {
+    background: #1dda46;
+
+}
+
+
