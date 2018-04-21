@@ -5,34 +5,41 @@
 .search-class {
     border: none;
     background: #ffffff;
-  }
+}
    
-  .icon-search {
+.icon-search {
     border: 1px solid #f2f2f2;
     border-top-left-radius: .25em;
     border-bottom-left-radius: .25em;
     border-right: none;
     padding-right: 0;
-  }
+}
    
-  .input-search {
+.input-search {
     border: 1px solid #f2f2f2;
     border-top-right-radius: .25em;
     border-bottom-right-radius: .25em;
     border-left: none;
-  }
+}
    
-  .input-search:focus {
+.input-search:focus {
     border-color: #f2f2f2;
-  }
+}
 
- #fa{
-    margin-top: 10px;
-    margin-left: 10px;
-  }
+#fa{
+    margin-top: 6px;
+    padding: 5px;
+}
 
-  #listaIncidencias{
-      overflow: auto;
-     
-      height: 600px;
-  }
+#listaIncidencias{
+    overflow: auto;
+    height: 550px;
+}
+
+.input-group-addon{
+    color: black;
+    background-color: #ffffff;
+    border-bottom-right-radius: .25em;
+    border-top-right-radius: .25em;
+}
+  

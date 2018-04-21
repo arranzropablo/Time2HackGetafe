@@ -5,7 +5,7 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-      var placeSearch, autocomplete;
+      var placeSearch, autocomplete = [];
       var componentForm = {
         street_number: 'short_name',
         route: 'long_name',
@@ -15,21 +15,31 @@
         postal_code: 'short_name'
       };
 
+      var places = [];
+      let inputIndex = 0;
+
       function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
         // location types.
-        autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-            {types: ['geocode']});
-
+        
+        
+        let elements = document.getElementsByClassName('autocomplete')
+        for(let i = 0; i < elements.length; i++){
+          $(elements).on("change", function(){inputIndex = i})
+          let autoC = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(elements[i]), {types: ['geocode']});
+          autoC.addListener('place_changed', fillInAddress)
+          autocomplete.push(autoC);
+        }
+        
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
+        //autocomplete.addListener('place_changed', fillInAddress);
       }
 
       function fillInAddress() {
         // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
+        var place = autocomplete[inputIndex].getPlace();
 
         for (var component in componentForm) {
           document.getElementById(component).value = '';

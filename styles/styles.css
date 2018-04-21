@@ -12,3 +12,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
 }
+
+.checkbox{
+    height: 20px;
+    width: 20px;
+}

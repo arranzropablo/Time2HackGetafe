@@ -1,7 +1,10 @@
 "use strict";
-
 let copy;
-let firstTime = true;
+let i = 0;
+$(function() {
+    copy = $("#listaIncidencias li");
+});
+
 function searchTeam(){
     let buscarIncidencia =  String($('#incidencia').prop('value').toLowerCase());
     let encontrados = [];
@@ -19,14 +22,17 @@ function searchTeam(){
 };
 
 function copia(){
-    if(firstTime){
-        copy = $("#listaIncidencias li");
-        firstTime = false;
-    }
     if($('#incidencia').prop('value') === ''){
         $("#listaIncidencias").append(copy);
     }
     else{
         searchTeam();
     }
+};
+
+function resolverIncidencia(event){
+    copy.splice(event-i, 1);
+    $("#listaIncidencias").empty();
+    $("#listaIncidencias").append(copy);
+    i++;
 };
