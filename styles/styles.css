@@ -32,16 +32,16 @@ body {
     color: white;
 }
 
-#searchBtn{
+.searchBtn{
     font-size: 30px;
     height: 55px !important;
     width: 80% !important;
-    background: #ff8811;
+    background: #ff8811 !important;
     text-align: center;
-    border-color: #ff8811;
+    border-color: #ff8811 !important;
 }
 
-#searchBtn:hover{
+.searchBtn:hover{
     background: #dd7206;
     border: #ff8811;
 }

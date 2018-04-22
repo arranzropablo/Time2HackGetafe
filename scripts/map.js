@@ -1,7 +1,6 @@
 
 $(() => {
     $("#map").hide();
-    $("#searchBtn").on("click", showHideMap);
     $(".optionBtn").each((index, item)=> {
         $(item).on("click", markSelectedBtn);
     });
@@ -27,7 +26,7 @@ function showHideMap(){
         $("#map").show();
     else
         $("#map").hide();
-    
+
 }
 
 function markSelectedBtn(event, item){
