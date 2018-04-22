@@ -57,8 +57,7 @@ body {
 }
 
 #endSearch{
-    margin: 2rem 26%;
-    margin-top: 2rem;
+    margin: 2rem 22%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
