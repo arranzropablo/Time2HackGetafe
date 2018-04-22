@@ -2,8 +2,7 @@
 let copy;
 let i = 0;
 
-let info = [
-    {
+let info = [{
         ubicacion: "Estacion de tren Getafe Centro",
         foto: "img/averiaAscensorLaguna.jpg",
         avisoA: "informacion@ayto-getafe.org",
@@ -14,7 +13,7 @@ let info = [
         ubicacion: "C/ Terradas nr 14 - 24, Getafe",
         foto: "img/obrasGetafe.jpg",
         avisoA: "informacion@ayto-getafe.org",
-        afectados: "Física",
+        afectados: "Física y psíquica",
         obs: "Plan de acerado del Ayntamiento de Getafe. Finaliza en 2 meses"
     },
 ];
@@ -23,13 +22,13 @@ $(function() {
     copy = $("#listaIncidencias li");
 });
 
-function searchTeam(){
-    let buscarIncidencia =  String($('#incidencia').prop('value').toLowerCase());
+function searchTeam() {
+    let buscarIncidencia = String($('#incidencia').prop('value').toLowerCase());
     let encontrados = [];
     $("#listaIncidencias li").each(function(index) {
-        let aviso = String($(this).text()).replace('Resolver','').replace('Detalles','').toLowerCase();
+        let aviso = String($(this).text()).replace('Resolver', '').replace('Detalles', '').toLowerCase();
         let contains = aviso.includes(buscarIncidencia);
-        if(contains && buscarIncidencia !== ''){           
+        if (contains && buscarIncidencia !== '') {
             let aux = $(this);
             encontrados.push(aux);
         }
@@ -39,27 +38,26 @@ function searchTeam(){
     $("#listaIncidencias").append(encontrados);
 };
 
-function copia(){
-    if($('#incidencia').prop('value') === ''){
+function copia() {
+    if ($('#incidencia').prop('value') === '') {
         $("#listaIncidencias").append(copy);
-    }
-    else{
+    } else {
         searchTeam();
     }
 };
 
-function resolverIncidencia(event){
-    copy.splice(event-i, 1);
+function resolverIncidencia(event) {
+    copy.splice(event - i, 1);
     $("#listaIncidencias").empty();
     $("#listaIncidencias").append(copy);
     i++;
 };
 
-function detallesIncidencia(nr){
-    let aviso = String($(copy[nr]).text()).replace('Resolver','').replace('Detalles','');
+function detallesIncidencia(nr) {
+    let aviso = String($(copy[nr]).text()).replace('Resolver', '').replace('Detalles', '');
     $("#modalLongTitle").text(aviso);
     $("#ubicacion").text(info[nr].ubicacion);
-    $("#foto").attr("src",info[nr].foto);
+    $("#foto").attr("src", info[nr].foto);
     $("#aviso").text(info[nr].avisoA);
     $("#afectados").text(info[nr].afectados);
     $("#obs").text(info[nr].obs);
