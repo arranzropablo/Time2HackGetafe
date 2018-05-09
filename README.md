@@ -11,7 +11,7 @@ Prototipo de una aplicación para mejorar la accesibilidad de gente con discapac
 
 Equipo de desarrollo formado por:
 
-	- https://github.com/mario800ml
-	- https://github.com/arranzropablo
-	- https://github.com/Macro21
-	- https://github.com/molinero95
+- https://github.com/mario800ml
+- https://github.com/arranzropablo
+- https://github.com/Macro21
+- https://github.com/molinero95
